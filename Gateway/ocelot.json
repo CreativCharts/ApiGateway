@@ -1,4 +1,3 @@
-
 {
   "Routes": [
     {
@@ -58,18 +57,32 @@
       ]
     },
     {
-      "DownstreamPathTemplate": "/api-docs",
+      "DownstreamPathTemplate": "/export",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 3001
+          "Port": 3002
         }
       ],
-      "UpstreamPathTemplate": "/api-docs",
+      "UpstreamPathTemplate": "/export",
       "UpstreamHttpMethod": [
         "Get"
       ]
+    },
+    {
+      "DownstreamPathTemplate": "/import",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3002
+        }
+      ],
+      "UpstreamPathTemplate": "/import",
+      "UpstreamHttpMethod": [
+        "Post"
+      ]
     }
   ]
-}
+}  
