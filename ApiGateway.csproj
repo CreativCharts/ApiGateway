@@ -20,4 +20,20 @@
       <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.5.0" />
     </ItemGroup>
 
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Gateway\appsettings.Development.json" />
+      <_ContentIncludedByDefault Remove="Gateway\appsettings.json" />
+      <_ContentIncludedByDefault Remove="Gateway\bin\Debug\net7.0\appsettings.Development.json" />
+      <_ContentIncludedByDefault Remove="Gateway\bin\Debug\net7.0\appsettings.json" />
+      <_ContentIncludedByDefault Remove="Gateway\bin\Debug\net7.0\Gateway.deps.json" />
+      <_ContentIncludedByDefault Remove="Gateway\bin\Debug\net7.0\Gateway.runtimeconfig.json" />
+      <_ContentIncludedByDefault Remove="Gateway\bin\Debug\net7.0\ocelot.json" />
+      <_ContentIncludedByDefault Remove="Gateway\obj\Debug\net7.0\staticwebassets.build.json" />
+      <_ContentIncludedByDefault Remove="Gateway\obj\Gateway.csproj.nuget.dgspec.json" />
+      <_ContentIncludedByDefault Remove="Gateway\obj\project.assets.json" />
+      <_ContentIncludedByDefault Remove="Gateway\obj\project.packagespec.json" />
+      <_ContentIncludedByDefault Remove="Gateway\ocelot.json" />
+      <_ContentIncludedByDefault Remove="Gateway\Properties\launchSettings.json" />
+    </ItemGroup>
+
 </Project>
