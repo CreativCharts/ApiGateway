@@ -1,7 +1,16 @@
 {
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:5030",
+    "UpstreamHeaderTransform": {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+      "Access-Control-Allow-Headers": "Content-Type",
+      "Access-Control-Allow-Credentials": "true"
+    }
+  },
   "Routes": [
     {
-      "DownstreamPathTemplate": "/",
+      "DownstreamPathTemplate": "/dashboard",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -9,13 +18,11 @@
           "Port": 3001
         }
       ],
-      "UpstreamPathTemplate": "/",
-      "UpstreamHttpMethod": [
-        "Get"
-      ]
+      "UpstreamPathTemplate": "/dashboard",
+      "UpstreamHttpMethod": ["Get"]
     },
     {
-      "DownstreamPathTemplate": "/chart",
+      "DownstreamPathTemplate": "/dashboard/create-chart",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -23,13 +30,11 @@
           "Port": 3001
         }
       ],
-      "UpstreamPathTemplate": "/chart",
-      "UpstreamHttpMethod": [
-        "Get"
-      ]
+      "UpstreamPathTemplate": "/dashboard/create-chart",
+      "UpstreamHttpMethod": ["Post"]
     },
     {
-      "DownstreamPathTemplate": "/charts",
+      "DownstreamPathTemplate": "/dashboard/allCharts",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -37,13 +42,11 @@
           "Port": 3001
         }
       ],
-      "UpstreamPathTemplate": "/charts",
-      "UpstreamHttpMethod": [
-        "Get"
-      ]
+      "UpstreamPathTemplate": "/dashboard/allCharts",
+      "UpstreamHttpMethod": [ "GET" ]
     },
     {
-      "DownstreamPathTemplate": "/allCharts",
+      "DownstreamPathTemplate": "/delete-chart",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -51,10 +54,20 @@
           "Port": 3001
         }
       ],
-      "UpstreamPathTemplate": "/allCharts",
-      "UpstreamHttpMethod": [
-        "Get"
-      ]
+      "UpstreamPathTemplate": "/dashboard/delete-chart",
+      "UpstreamHttpMethod": ["Delete"]
+    },
+    {
+      "DownstreamPathTemplate": "/update-chart",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "UpstreamPathTemplate": "/dashboard/update-chart",
+      "UpstreamHttpMethod": ["Put"]
     },
     {
       "DownstreamPathTemplate": "/export",
@@ -66,9 +79,7 @@
         }
       ],
       "UpstreamPathTemplate": "/export",
-      "UpstreamHttpMethod": [
-        "Get"
-      ]
+      "UpstreamHttpMethod": ["Get"]
     },
     {
       "DownstreamPathTemplate": "/import",
@@ -80,9 +91,7 @@
         }
       ],
       "UpstreamPathTemplate": "/import",
-      "UpstreamHttpMethod": [
-        "Post"
-      ]
+      "UpstreamHttpMethod": ["Post"]
     }
   ]
-}  
+}
