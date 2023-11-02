@@ -10,16 +10,18 @@
   },
   "Routes": [
     {
-      "DownstreamPathTemplate": "/dashboard",
+      "DownstreamPathTemplate": "/",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 3001
+          "Port": 5173
         }
       ],
-      "UpstreamPathTemplate": "/dashboard",
-      "UpstreamHttpMethod": ["Get"]
+      "UpstreamPathTemplate": "/",
+      "UpstreamHttpMethod": [
+        "GET"
+      ]
     },
     {
       "DownstreamPathTemplate": "/dashboard/create-chart",
@@ -30,11 +32,13 @@
           "Port": 3001
         }
       ],
-      "UpstreamPathTemplate": "/dashboard/create-chart",
-      "UpstreamHttpMethod": ["Post"]
+      "UpstreamPathTemplate": "/create-chart",
+      "UpstreamHttpMethod": [
+        "POST"
+      ]
     },
     {
-      "DownstreamPathTemplate": "/dashboard/allCharts",
+      "DownstreamPathTemplate": "/dashboard/all-charts",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -42,11 +46,13 @@
           "Port": 3001
         }
       ],
-      "UpstreamPathTemplate": "/dashboard/allCharts",
-      "UpstreamHttpMethod": [ "GET" ]
+      "UpstreamPathTemplate": "/all-charts",
+      "UpstreamHttpMethod": [
+        "GET"
+      ]
     },
     {
-      "DownstreamPathTemplate": "/delete-chart",
+      "DownstreamPathTemplate": "/delete-chart/{id}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -54,11 +60,13 @@
           "Port": 3001
         }
       ],
-      "UpstreamPathTemplate": "/dashboard/delete-chart",
-      "UpstreamHttpMethod": ["Delete"]
+      "UpstreamPathTemplate": "/delete-chart/{id}",
+      "UpstreamHttpMethod": [
+        "DELETE"
+      ]
     },
     {
-      "DownstreamPathTemplate": "/update-chart",
+      "DownstreamPathTemplate": "/update-chart/{id}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -66,8 +74,10 @@
           "Port": 3001
         }
       ],
-      "UpstreamPathTemplate": "/dashboard/update-chart",
-      "UpstreamHttpMethod": ["Put"]
+      "UpstreamPathTemplate": "/update-chart/{id}",
+      "UpstreamHttpMethod": [
+        "PUT"
+      ]
     },
     {
       "DownstreamPathTemplate": "/export",
@@ -79,7 +89,9 @@
         }
       ],
       "UpstreamPathTemplate": "/export",
-      "UpstreamHttpMethod": ["Get"]
+      "UpstreamHttpMethod": [
+        "GET"
+      ]
     },
     {
       "DownstreamPathTemplate": "/import",
@@ -91,7 +103,59 @@
         }
       ],
       "UpstreamPathTemplate": "/import",
-      "UpstreamHttpMethod": ["Post"]
+      "UpstreamHttpMethod": [
+        "POST"
+      ]
+    },
+    {
+      "DownstreamPathTemplate": "/swagger/{documentName}/swagger.json",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "UpstreamPathTemplate": "/swagger/docs/{documentName}/swagger.json",
+      "UpstreamHttpMethod": [
+        "GET"
+      ]
     }
-  ]
+  ],
+  "SwaggerEndPoints": [
+    {
+      "Key": "service1",
+      "Config": [
+        {
+          "Name": "Service 1 API",
+          "Version": "v1",
+          "Url": "http://localhost:3001/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "service2",
+      "Config": [
+        {
+          "Name": "Service 2 API",
+          "Version": "v1",
+          "Url": "http://localhost:3002/swagger/v1/swagger.json"
+        }
+      ]
+    }
+  ],
+  "SwaggerForOcelot": {
+    "Routes": [
+      {
+        "DownstreamSwaggerEndPointBasePath": "/swagger/docs",
+        "Service": "service1",
+        "Path": "/swagger/docs/service1/swagger.json"
+      },
+      {
+        "DownstreamSwaggerEndPointBasePath": "/swagger/docs",
+        "Service": "service2",
+        "Path": "/swagger/docs/service2/swagger.json"
+      }
+    ]
+  }
 }
