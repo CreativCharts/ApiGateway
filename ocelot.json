@@ -10,7 +10,7 @@
   },
   "Routes": [
     {
-      "DownstreamPathTemplate": "/",
+      "DownstreamPathTemplate": "/api",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -24,7 +24,7 @@
       ]
     },
     {
-      "DownstreamPathTemplate": "/dashboard/create-chart",
+      "DownstreamPathTemplate": "/editor/create-chart",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
