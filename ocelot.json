@@ -10,7 +10,7 @@
   },
   "Routes": [
     {
-      "DownstreamPathTemplate": "/api",
+      "DownstreamPathTemplate": "/",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -52,7 +52,7 @@
       ]
     },
     {
-      "DownstreamPathTemplate": "/delete-chart/{id}",
+      "DownstreamPathTemplate": "/editor/chart",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -60,13 +60,27 @@
           "Port": 3001
         }
       ],
-      "UpstreamPathTemplate": "/delete-chart/{id}",
+      "UpstreamPathTemplate": "/chart",
+      "UpstreamHttpMethod": [
+        "GET"
+      ]
+    },
+    {
+      "DownstreamPathTemplate": "/delete-chart/:id",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 3001
+        }
+      ],
+      "UpstreamPathTemplate": "/delete-chart/:id",
       "UpstreamHttpMethod": [
         "DELETE"
       ]
     },
     {
-      "DownstreamPathTemplate": "/update-chart/{id}",
+      "DownstreamPathTemplate": "/update-chart/:id",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -74,7 +88,7 @@
           "Port": 3001
         }
       ],
-      "UpstreamPathTemplate": "/update-chart/{id}",
+      "UpstreamPathTemplate": "/update-chart/:id",
       "UpstreamHttpMethod": [
         "PUT"
       ]
