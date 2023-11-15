@@ -24,7 +24,7 @@
       ]
     },
     {
-      "DownstreamPathTemplate": "/editor/create-chart",
+      "DownstreamPathTemplate": "/editor/create-chart/",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -38,7 +38,7 @@
       ]
     },
     {
-      "DownstreamPathTemplate": "/dashboard/all-charts",
+      "DownstreamPathTemplate": "/dashboard/all-charts/{id}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -52,7 +52,7 @@
       ]
     },
     {
-      "DownstreamPathTemplate": "/editor/chart",
+      "DownstreamPathTemplate": "/editor/chart/{id}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -66,7 +66,7 @@
       ]
     },
     {
-      "DownstreamPathTemplate": "/delete-chart/:id",
+      "DownstreamPathTemplate": "/dashboard/delete-chart/{id}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -74,13 +74,13 @@
           "Port": 3001
         }
       ],
-      "UpstreamPathTemplate": "/delete-chart/:id",
+      "UpstreamPathTemplate": "/delete-chart/{id}",
       "UpstreamHttpMethod": [
         "DELETE"
       ]
     },
     {
-      "DownstreamPathTemplate": "/update-chart/:id",
+      "DownstreamPathTemplate": "/editor/update-chart/:id",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
