@@ -15,7 +15,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 5173
+          "Port": 3001
         }
       ],
       "UpstreamPathTemplate": "/",
@@ -24,7 +24,7 @@
       ]
     },
     {
-      "DownstreamPathTemplate": "/editor/create-chart/",
+      "DownstreamPathTemplate": "/editor/create-chart",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -38,7 +38,7 @@
       ]
     },
     {
-      "DownstreamPathTemplate": "/dashboard/all-charts/{id}",
+      "DownstreamPathTemplate": "/dashboard/all-charts",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -60,7 +60,7 @@
           "Port": 3001
         }
       ],
-      "UpstreamPathTemplate": "/chart",
+      "UpstreamPathTemplate": "/chart/{id}",
       "UpstreamHttpMethod": [
         "GET"
       ]
@@ -80,7 +80,7 @@
       ]
     },
     {
-      "DownstreamPathTemplate": "/editor/update-chart/:id",
+      "DownstreamPathTemplate": "/editor/update-chart/{id}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -88,7 +88,7 @@
           "Port": 3001
         }
       ],
-      "UpstreamPathTemplate": "/update-chart/:id",
+      "UpstreamPathTemplate": "/update-chart/{id}",
       "UpstreamHttpMethod": [
         "PUT"
       ]

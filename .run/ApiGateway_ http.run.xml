@@ -10,6 +10,7 @@
     <option name="SHOW_IIS_EXPRESS_OUTPUT" value="0" />
     <option name="SEND_DEBUG_REQUEST" value="1" />
     <option name="ADDITIONAL_IIS_EXPRESS_ARGUMENTS" value="" />
+    <option name="RUNTIME_TYPE" value="coreclr" />
     <method v="2">
       <option name="Build" />
     </method>
