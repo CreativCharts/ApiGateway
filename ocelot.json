@@ -24,7 +24,7 @@
       ]
     },
     {
-      "DownstreamPathTemplate": "/editor/create-chart",
+      "DownstreamPathTemplate": "/editor/create",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -32,13 +32,13 @@
           "Port": 3001
         }
       ],
-      "UpstreamPathTemplate": "/create-chart",
+      "UpstreamPathTemplate": "/create",
       "UpstreamHttpMethod": [
         "POST"
       ]
     },
     {
-      "DownstreamPathTemplate": "/dashboard/all-charts",
+      "DownstreamPathTemplate": "/dashboard/all",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -46,7 +46,7 @@
           "Port": 3001
         }
       ],
-      "UpstreamPathTemplate": "/all-charts",
+      "UpstreamPathTemplate": "/all",
       "UpstreamHttpMethod": [
         "GET"
       ]
@@ -66,7 +66,7 @@
       ]
     },
     {
-      "DownstreamPathTemplate": "/dashboard/delete-chart/{id}",
+      "DownstreamPathTemplate": "/dashboard/delete/{id}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -74,13 +74,13 @@
           "Port": 3001
         }
       ],
-      "UpstreamPathTemplate": "/delete-chart/{id}",
+      "UpstreamPathTemplate": "/delete/{id}",
       "UpstreamHttpMethod": [
         "DELETE"
       ]
     },
     {
-      "DownstreamPathTemplate": "/editor/update-chart/{id}",
+      "DownstreamPathTemplate": "/editor/update/{id}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -88,7 +88,7 @@
           "Port": 3001
         }
       ],
-      "UpstreamPathTemplate": "/update-chart/{id}",
+      "UpstreamPathTemplate": "/update/{id}",
       "UpstreamHttpMethod": [
         "PUT"
       ]
@@ -120,20 +120,6 @@
       "UpstreamHttpMethod": [
         "POST"
       ]
-    },
-    {
-      "DownstreamPathTemplate": "/swagger/{documentName}/swagger.json",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 3001
-        }
-      ],
-      "UpstreamPathTemplate": "/swagger/docs/{documentName}/swagger.json",
-      "UpstreamHttpMethod": [
-        "GET"
-      ]
     }
   ],
   "SwaggerEndPoints": [
@@ -157,19 +143,5 @@
         }
       ]
     }
-  ],
-  "SwaggerForOcelot": {
-    "Routes": [
-      {
-        "DownstreamSwaggerEndPointBasePath": "/swagger/docs",
-        "Service": "service1",
-        "Path": "/swagger/docs/service1/swagger.json"
-      },
-      {
-        "DownstreamSwaggerEndPointBasePath": "/swagger/docs",
-        "Service": "service2",
-        "Path": "/swagger/docs/service2/swagger.json"
-      }
-    ]
-  }
+  ]
 }
