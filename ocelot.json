@@ -10,7 +10,7 @@
   },
   "Routes": [
     {
-      "DownstreamPathTemplate": "/",
+      "DownstreamPathTemplate": "/home",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -18,7 +18,7 @@
           "Port": 3001
         }
       ],
-      "UpstreamPathTemplate": "/",
+      "UpstreamPathTemplate": "/home",
       "UpstreamHttpMethod": [
         "GET"
       ]
