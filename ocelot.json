@@ -1,6 +1,6 @@
 {
   "GlobalConfiguration": {
-    "BaseUrl": "http://localhost:5030",
+    "BaseUrl": "http://localhost:5031",
     "UpstreamHeaderTransform": {
       "Access-Control-Allow-Origin": "*",
       "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
@@ -10,7 +10,7 @@
   },
   "Routes": [
     {
-      "DownstreamPathTemplate": "/home",
+      "DownstreamPathTemplate": "/api/home",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -18,13 +18,13 @@
           "Port": 3001
         }
       ],
-      "UpstreamPathTemplate": "/home",
+      "UpstreamPathTemplate": "/api/home",
       "UpstreamHttpMethod": [
         "GET"
       ]
     },
     {
-      "DownstreamPathTemplate": "/editor/create",
+      "DownstreamPathTemplate": "/api/editor/create",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -32,13 +32,13 @@
           "Port": 3001
         }
       ],
-      "UpstreamPathTemplate": "/create",
+      "UpstreamPathTemplate": "/api/editor/create",
       "UpstreamHttpMethod": [
         "POST"
       ]
     },
     {
-      "DownstreamPathTemplate": "/dashboard/all",
+      "DownstreamPathTemplate": "/api/dashboard/all",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -46,13 +46,13 @@
           "Port": 3001
         }
       ],
-      "UpstreamPathTemplate": "/all",
+      "UpstreamPathTemplate": "/api/dashboard/all",
       "UpstreamHttpMethod": [
         "GET"
       ]
     },
     {
-      "DownstreamPathTemplate": "/editor/chart/{id}",
+      "DownstreamPathTemplate": "/api/editor/chart/{id}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -60,13 +60,13 @@
           "Port": 3001
         }
       ],
-      "UpstreamPathTemplate": "/chart/{id}",
+      "UpstreamPathTemplate": "/api/editor/chart/{id}",
       "UpstreamHttpMethod": [
         "GET"
       ]
     },
     {
-      "DownstreamPathTemplate": "/dashboard/delete/{id}",
+      "DownstreamPathTemplate": "/api/dashboard/delete/{id}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -74,13 +74,13 @@
           "Port": 3001
         }
       ],
-      "UpstreamPathTemplate": "/delete/{id}",
+      "UpstreamPathTemplate": "/api/dashboard/delete/{id}",
       "UpstreamHttpMethod": [
         "DELETE"
       ]
     },
     {
-      "DownstreamPathTemplate": "/editor/update/{id}",
+      "DownstreamPathTemplate": "/api/editor/update/{id}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -88,7 +88,7 @@
           "Port": 3001
         }
       ],
-      "UpstreamPathTemplate": "/update/{id}",
+      "UpstreamPathTemplate": "/api/editor/update/{id}",
       "UpstreamHttpMethod": [
         "PUT"
       ]
