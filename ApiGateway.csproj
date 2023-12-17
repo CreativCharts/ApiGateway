@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Content Include="..\.dockerignore">
+        <Link>.dockerignore</Link>
+      </Content>
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="MMLib.SwaggerForOcelot" Version="7.0.1" />
+      <PackageReference Include="Ocelot" Version="19.0.3" />
+      <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="6.5.0" />
+      <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.5.0" />
+      <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.5.0" />
+      <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Gateway\appsettings.Development.json" />
+      <_ContentIncludedByDefault Remove="Gateway\appsettings.json" />
+      <_ContentIncludedByDefault Remove="Gateway\bin\Debug\net7.0\appsettings.Development.json" />
+      <_ContentIncludedByDefault Remove="Gateway\bin\Debug\net7.0\appsettings.json" />
+      <_ContentIncludedByDefault Remove="Gateway\bin\Debug\net7.0\Gateway.deps.json" />
+      <_ContentIncludedByDefault Remove="Gateway\bin\Debug\net7.0\Gateway.runtimeconfig.json" />
+      <_ContentIncludedByDefault Remove="Gateway\bin\Debug\net7.0\ocelot.json" />
+      <_ContentIncludedByDefault Remove="Gateway\obj\Debug\net7.0\staticwebassets.build.json" />
+      <_ContentIncludedByDefault Remove="Gateway\obj\Gateway.csproj.nuget.dgspec.json" />
+      <_ContentIncludedByDefault Remove="Gateway\obj\project.assets.json" />
+      <_ContentIncludedByDefault Remove="Gateway\obj\project.packagespec.json" />
+      <_ContentIncludedByDefault Remove="Gateway\ocelot.json" />
+      <_ContentIncludedByDefault Remove="Gateway\Properties\launchSettings.json" />
+    </ItemGroup>
+
+</Project>
